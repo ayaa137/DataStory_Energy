@@ -1,0 +1,78 @@
+---
+title: "Data Story Example Slides"
+format: revealjs
+---
+
+## Slide-deck for your presentation
+
+::: {.incremental}
+- This is an exmple file for a slide-deck of a data story in a *narrative structure*. 
+    - See *Effective Data Storytelling*, Brent Dykes (2020), Figure 4.3.
+- **Narrative structure** means, that the slide-deck can be used to tell a story in a **linear way** in front of an audience while going through the slides.  
+- This slidedeck is made with quarto revealjs. Documentation: [Quarto > Presentations > Revealjs](https://quarto.org/docs/presentations/revealjs/)
+- It is written a bit similar to a report. Each `## Headline` becomes a slide title and defines a slide. You just use less text, more often in lists, and more visuals. 
+- You can go interactive easily because it is HTML. 
+:::
+
+
+## Visuals
+
+```{r}
+#| echo: false # This shows no code
+
+library(tidyverse)
+df <- read_csv("data/country_panel_wdi_who.csv", show_col_types = FALSE)
+df |>
+  filter(year %in% c(1978, 1998, 2018)) |>
+  ggplot(aes(
+    x = gdp_per_capita_usd,
+    y = life_expectancy_years,
+    size = total_population,
+    color = region
+  )) +
+  geom_point(alpha = 0.8) +
+  scale_x_log10(breaks = c(300, 3000, 30000)) +
+  scale_y_continuous(limits = c(40, 87)) +
+  scale_size_area(max_size = 15) +
+  scale_color_brewer(palette = "Dark2") +
+  facet_wrap(~year) +
+  labs(x = "GDP per capita (USD)", y = "Life expectancy (years)") +
+  theme_minimal() +
+  theme(
+    legend.position = "bottom",
+    panel.border = element_rect(),
+    aspect.ratio = 1
+  ) +
+  guides(
+    size = "none",
+    color = guide_legend(ncol = 4, override.aes = list(size = 4), title = NULL)
+  )
+``` 
+
+
+
+## More visuals
+
+```{r}
+df |>
+  filter(year == 2016, total_population > 20000000) |>
+  summarize(
+    mean_var = mean(life_expectancy_years),
+    .by = c(country_name, region)
+  ) |>
+  arrange(mean_var) |>
+  ggplot(aes(
+    x = mean_var,
+    y = country_name |> fct_inorder(),
+    fill = region
+  )) +
+  geom_col() +
+  labs(
+    title = "Life Expectancy, Countries with more than 20 Mio.",
+    x = "",
+    y = "",
+    fill = ""
+  ) +
+  scale_fill_brewer(palette = "Dark2") +
+  theme_minimal(base_size = 8.5)
+```

@@ -1,0 +1,163 @@
+---
+title: "Scrollytelling"
+author: "Names"
+format: closeread-html
+---
+
+This is an example of Data Scrollytelling using the quarto extension [`closeread`](https://closeread.dev).
+
+::: {.callout-note}
+There is a Student Scrolly-Telling Competition with a deadline fitting for your project!
+:::
+
+```{r}
+#| label: packages
+#| message: false
+
+# These are the packages used in the report
+library(tidyverse)
+```
+
+:::{.cr-section}
+
+Let us look at a bubble plot in the style of Hans Rosling. @cr-bubble1
+
+Each bubble represents a country. The bubble size represents the population. 
+
+:::{#cr-bubble1}
+```{r}
+#| warning: false 
+
+df <- read_csv("data/country_panel_wdi_who.csv", show_col_types = FALSE)
+
+df |>
+  filter(year %in% c(2018)) |>
+  ggplot(aes(
+    x = gdp_per_capita_usd,
+    y = life_expectancy_years,
+    size = total_population,
+    color = region
+  )) +
+  geom_point(alpha = 0.8) +
+  scale_x_log10(breaks = c(300, 3000, 30000), limits = c(200, 60000)) +
+  scale_y_continuous(limits = c(40, 87)) +
+  scale_size_area(max_size = 15) +
+  scale_color_brewer(palette = "Dark2") +
+  labs(
+    title = "In the year 2018",
+    x = "GDP per capita (USD)",
+    y = "Life expectancy (years)"
+  ) +
+  theme_minimal() +
+  theme(legend.position = "bottom", panel.border = element_rect()) +
+  guides(
+    size = "none",
+    color = guide_legend(ncol = 4, override.aes = list(size = 4), title = NULL)
+  )
+```
+:::
+
+40 years before the cloud looked differently. @cr-bubble2 
+
+:::{#cr-bubble2}
+```{r}
+#| warning: false 
+
+df <- read_csv("data/country_panel_wdi_who.csv", show_col_types = FALSE)
+
+df |>
+  filter(year %in% c(1978)) |>
+  ggplot(aes(
+    x = gdp_per_capita_usd,
+    y = life_expectancy_years,
+    size = total_population,
+    color = region
+  )) +
+  geom_point(alpha = 0.8) +
+  scale_x_log10(breaks = c(300, 3000, 30000), limits = c(200, 60000)) +
+  scale_y_continuous(limits = c(40, 87)) +
+  scale_size_area(max_size = 15) +
+  scale_color_brewer(palette = "Dark2") +
+  labs(
+    title = "In the year 1978",
+    x = "GDP per capita (USD)",
+    y = "Life expectancy (years)"
+  ) +
+  theme_minimal() +
+  theme(legend.position = "bottom", panel.border = element_rect()) +
+  guides(
+    size = "none",
+    color = guide_legend(ncol = 4, override.aes = list(size = 4), title = NULL)
+  )
+```
+:::
+
+
+
+Over the years the cloud of bubbles moved upward and rightward into the healthier and wealthier corner. @cr-bubbles 
+
+[@cr-bubbles]{scale-by="1.5"} 
+
+
+:::{#cr-bubbles}
+```{r}
+#| warning: false 
+
+df <- read_csv("data/country_panel_wdi_who.csv", show_col_types = FALSE)
+
+df |>
+  filter(year %in% c(1978, 1998, 2018)) |>
+  ggplot(aes(
+    x = gdp_per_capita_usd,
+    y = life_expectancy_years,
+    size = total_population,
+    color = region
+  )) +
+  geom_point(alpha = 0.8) +
+  scale_x_log10(breaks = c(300, 3000, 30000)) +
+  scale_y_continuous(limits = c(40, 87)) +
+  scale_size_area(max_size = 15) +
+  scale_color_brewer(palette = "Dark2") +
+  facet_wrap(~year) +
+  labs(x = "GDP per capita (USD)", y = "Life expectancy (years)") +
+  theme_minimal() +
+  theme(legend.position = "bottom", panel.border = element_rect()) +
+  guides(
+    size = "none",
+    color = guide_legend(ncol = 4, override.aes = list(size = 4), title = NULL)
+  )
+```
+:::
+
+
+:::
+
+## Now a regular HTML continues
+
+```{r}
+#| label: fig-lifeexpectancy
+#| fig-height: 7
+#| fig-cap: "*This is just a placeholder.*"
+
+df |>
+  filter(year == 2016, total_population > 20000000) |>
+  summarize(
+    mean_var = mean(life_expectancy_years),
+    .by = c(country_name, region)
+  ) |>
+  arrange(mean_var) |>
+  ggplot(aes(
+    x = mean_var,
+    y = country_name |> fct_inorder(),
+    fill = region
+  )) +
+  geom_col() +
+  labs(
+    title = "Life Expectancy, Countries with more than 20 Mio.",
+    x = "",
+    y = "",
+    fill = ""
+  ) +
+  scale_fill_brewer(palette = "Dark2") +
+  theme_minimal()
+```

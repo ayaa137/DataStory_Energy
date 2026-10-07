@@ -1,0 +1,316 @@
+[
+	{
+		"id": "BoyEtAl2017ShowingPeopleData",
+		"type": "paper-conference",
+		"abstract": "We investigate the impact of using anthropomorphized data graphics over standard charts on viewers' empathy for, and prosocial behavior toward suffering populations, in the context of human rights narratives. We present a series of experiments conducted on Amazon Mechanical Turk, in which we compare various forms of anthropomorphized data graphics-ranging from a single human figure that \"fills up\" to show proportional data, to separated groups of individual human beings-with a standard chart baseline. Each experiment uses two carefully crafted human rights data-driven stories to present the graphics. Contrary to our expectations, we consistently find that anthropomorphized data graphics and standard charts have very similar effects on empathy and prosocial behavior.",
+		"citation-key": "BoyEtAl2017ShowingPeopleData",
+		"collection-title": "CHI '17",
+		"container-title": "Proceedings of the 2017 CHI Conference on Human Factors in Computing Systems",
+		"DOI": "10.1145/3025453.3025512",
+		"ISBN": "978-1-4503-4655-9",
+		"page": "5462–5474",
+		"publisher": "Association for Computing Machinery",
+		"publisher-place": "New York, NY, USA",
+		"source": "ACM Digital Library",
+		"title": "Showing People Behind Data: Does Anthropomorphizing Visualizations Elicit More Empathy for Human Rights Data?",
+		"title-short": "Showing People Behind Data",
+		"URL": "https://dl.acm.org/doi/10.1145/3025453.3025512",
+		"author": [
+			{
+				"family": "Boy",
+				"given": "Jeremy"
+			},
+			{
+				"family": "Pandey",
+				"given": "Anshul Vikram"
+			},
+			{
+				"family": "Emerson",
+				"given": "John"
+			},
+			{
+				"family": "Satterthwaite",
+				"given": "Margaret"
+			},
+			{
+				"family": "Nov",
+				"given": "Oded"
+			},
+			{
+				"family": "Bertini",
+				"given": "Enrico"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2026",
+					9,
+					23
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2017",
+					5,
+					2
+				]
+			]
+		}
+	},
+	{
+		"id": "FranconeriEtAl2021ScienceVisualData",
+		"type": "article-journal",
+		"abstract": "Effectively designed data visualizations allow viewers to use their powerful visual systems to understand patterns in data across science, education, health, and public policy. But ineffectively designed visualizations can cause confusion, misunderstanding, or even distrust—especially among viewers with low graphical literacy. We review research-backed guidelines for creating effective and intuitive visualizations oriented toward communicating data to students, coworkers, and the general public. We describe how the visual system can quickly extract broad statistics from a display, whereas poorly designed displays can lead to misperceptions and illusions. Extracting global statistics is fast, but comparing between subsets of values is slow. Effective graphics avoid taxing working memory, guide attention, and respect familiar conventions. Data visualizations can play a critical role in teaching and communication, provided that designers tailor those visualizations to their audience.",
+		"citation-key": "FranconeriEtAl2021ScienceVisualData",
+		"container-title": "Psychological Science in the Public Interest",
+		"DOI": "10.1177/15291006211051956",
+		"ISSN": "1529-1006",
+		"issue": "3",
+		"journalAbbreviation": "Psychol Sci Public Interest",
+		"language": "EN",
+		"page": "110-161",
+		"publisher": "SAGE Publications Inc",
+		"source": "SAGE Journals",
+		"title": "The Science of Visual Data Communication: What Works",
+		"title-short": "The Science of Visual Data Communication",
+		"URL": "https://doi.org/10.1177/15291006211051956",
+		"volume": "22",
+		"author": [
+			{
+				"family": "Franconeri",
+				"given": "Steven L."
+			},
+			{
+				"family": "Padilla",
+				"given": "Lace M."
+			},
+			{
+				"family": "Shah",
+				"given": "Priti"
+			},
+			{
+				"family": "Zacks",
+				"given": "Jeffrey M."
+			},
+			{
+				"family": "Hullman",
+				"given": "Jessica"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2025",
+					11,
+					3
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2021",
+					12,
+					1
+				]
+			]
+		}
+	},
+	{
+		"id": "KongEtAl2018FramesSlantsTitles",
+		"type": "paper-conference",
+		"abstract": "Slanted framing in news article titles induce bias and influence recall. While recent studies found that viewers focus extensively on titles when reading visualizations, the impact of titles in visualization remains underexplored. We study frames in visualization titles, and how the slanted framing of titles and the viewer's pre-existing attitude impact recall, perception of bias, and change of attitude. When asked to compose visualization titles, people used five existing news frames, an open-ended frame, and a statistics frame. We found that the slant of the title influenced the perceived main message of a visualization, with viewers deriving opposing messages from the same visualization. The results did not show any significant effect on attitude change. We highlight the danger of subtle statistics frames and viewers' unwarranted conviction of the neutrality of visualizations. Finally, we present a design implication for the generation of visualization titles and one for the viewing of titles.",
+		"citation-key": "KongEtAl2018FramesSlantsTitles",
+		"collection-title": "CHI '18",
+		"container-title": "Proceedings of the 2018 CHI Conference on Human Factors in Computing Systems",
+		"DOI": "10.1145/3173574.3174012",
+		"ISBN": "978-1-4503-5620-6",
+		"page": "1–12",
+		"publisher": "Association for Computing Machinery",
+		"publisher-place": "New York, NY, USA",
+		"source": "ACM Digital Library",
+		"title": "Frames and Slants in Titles of Visualizations on Controversial Topics",
+		"URL": "https://dl.acm.org/doi/10.1145/3173574.3174012",
+		"author": [
+			{
+				"family": "Kong",
+				"given": "Ha-Kyung"
+			},
+			{
+				"family": "Liu",
+				"given": "Zhicheng"
+			},
+			{
+				"family": "Karahalios",
+				"given": "Karrie"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2026",
+					9,
+					3
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2018",
+					4,
+					21
+				]
+			]
+		}
+	},
+	{
+		"id": "Munzner2009NestedModelVisualization",
+		"type": "article-journal",
+		"abstract": "We present a nested model for the visualization design and validation with four layers: characterize the task and data in the vocabulary of the problem domain, abstract into operations and data types, design visual encoding and interaction techniques, and create algorithms to execute techniques efficiently. The output from a level above is input to the level below, bringing attention to the design challenge that an upstream error inevitably cascades to all downstream levels. This model provides prescriptive guidance for determining appropriate evaluation approaches by identifying threats to validity unique to each level. We also provide three recommendations motivated by this model: authors should distinguish between these levels when claiming contributions at more than one of them, authors should explicitly state upstream assumptions at levels above the focus of a paper, and visualization venues should accept more papers on domain characterization.",
+		"citation-key": "Munzner2009NestedModelVisualization",
+		"container-title": "IEEE Transactions on Visualization and Computer Graphics",
+		"DOI": "10.1109/TVCG.2009.111",
+		"ISSN": "1941-0506",
+		"issue": "6",
+		"page": "921-928",
+		"source": "IEEE Xplore",
+		"title": "A Nested Model for Visualization Design and Validation",
+		"URL": "https://ieeexplore.ieee.org/abstract/document/5290695",
+		"volume": "15",
+		"author": [
+			{
+				"family": "Munzner",
+				"given": "Tamara"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2026",
+					9,
+					3
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2009",
+					11
+				]
+			]
+		}
+	},
+	{
+		"id": "Savage2026HowWhyRead",
+		"type": "article",
+		"abstract": "This article is designed to concisely teach undergraduate and new graduate students lessons in reading and writing I have learned in my past two decades as a university student, teacher, and researcher (including through publishing, retracting, correcting, and republishing articles in outlets with varying levels of “impact” and publication fees). Don’t just start at the beginning of an academic article/book and try to read straight to the end! Instead, I recommend starting by reading the title(s)/author(s) and abstract(s), then the figures, reading the Discussion section, and skimming/spot-checking the references, peer reviews, and data (e.g., spreadsheets, audiovisual stimuli, surveys), if available. Only once you have done this and evaluated whether it seems worth your time do I recommend deciding whether to read every word of some/all sections/chapters (and any accompanying supplementary material) or digging deeper into reanalysing/replicating the data. I recommend writing accordingly so that most of your key information will be conveyed even if your reader only gets through your title, abstract, and figures. I discuss various strategies to improve your own academic reading/writing and the broader culture of academia, from practical (e.g., formatting and tracking references and citations using Zotero and Google Scholar, asking constructive questions rather than self-promoting comments, publishing using Peer Community In Registered Reports, using the “sandwich thesis” model for PhD dissertations) to philosophical (e.g., ethical issues in authorship, citation, AI, publishing, and funding). I explain the intended goals of academic research (to create and distribute valuable new knowledge) and perverse incentives that lead us astray from these goals (e.g., chasing prestige and funding). I conclude by contemplating if and how we should dismantle the current extortionary academic-industrial complex and re-design it to align with its intended goals.",
+		"citation-key": "Savage2026HowWhyRead",
+		"DOI": "10.31234/osf.io/p37zj_v4",
+		"license": "https://creativecommons.org/licenses/by/4.0/legalcode",
+		"publisher": "PsyArXiv",
+		"source": "DOI.org (Crossref)",
+		"title": "How and why to read (and write and publish) academic research",
+		"URL": "https://osf.io/p37zj_v4",
+		"author": [
+			{
+				"family": "Savage",
+				"given": "Patrick E."
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2026",
+					7,
+					26
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2026",
+					7,
+					25
+				]
+			]
+		}
+	},
+	{
+		"id": "SegelHeer2010NarrativeVisualizationTelling",
+		"type": "article-journal",
+		"abstract": "Data visualization is regularly promoted for its ability to reveal stories within data, yet these “data stories” differ in important ways from traditional forms of storytelling. Storytellers, especially online journalists, have increasingly been integrating visualizations into their narratives, in some cases allowing the visualization to function in place of a written story. In this paper, we systematically review the design space of this emerging class of visualizations. Drawing on case studies from news media to visualization research, we identify distinct genres of narrative visualization. We characterize these design differences, together with interactivity and messaging, in terms of the balance between the narrative flow intended by the author (imposed by graphical elements and the interface) and story discovery on the part of the reader (often through interactive exploration). Our framework suggests design strategies for narrative visualization, including promising under-explored approaches to journalistic storytelling and educational media.",
+		"citation-key": "SegelHeer2010NarrativeVisualizationTelling",
+		"container-title": "IEEE Transactions on Visualization and Computer Graphics",
+		"DOI": "10.1109/TVCG.2010.179",
+		"ISSN": "1941-0506",
+		"issue": "6",
+		"page": "1139-1148",
+		"source": "IEEE Xplore",
+		"title": "Narrative Visualization: Telling Stories with Data",
+		"title-short": "Narrative Visualization",
+		"URL": "https://ieeexplore.ieee.org/document/5613452",
+		"volume": "16",
+		"author": [
+			{
+				"family": "Segel",
+				"given": "Edward"
+			},
+			{
+				"family": "Heer",
+				"given": "Jeffrey"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2026",
+					9,
+					3
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2010",
+					11
+				]
+			]
+		}
+	},
+	{
+		"id": "Dykes2019EffectiveDataStorytelling",
+		"type": "book",
+		"abstract": "Master the art and science of data storytelling—with frameworks and techniques to help you craft compelling stories with data. The ability to effectively communicate with data is no longer a luxury in today’s economy; it is a necessity. Transforming data into visual communication is only one part of the picture. It is equally important to engage your audience with a narrative—to tell a story with the numbers. Effective Data Storytelling will teach you the essential skills necessary to communicate your insights through persuasive and memorable data stories. Narratives are more powerful than raw statistics, more enduring than pretty charts. When done correctly, data stories can influence decisions and drive change. Most other books focus only on data visualization while neglecting the powerful narrative and psychological aspects of telling stories with data. Author Brent Dykes shows you how to take the three central elements of data storytelling—data, narrative, and visuals—and combine them for maximum effectiveness. Taking a comprehensive look at all the elements of data storytelling, this unique book will enable you to:  Transform your insights and data visualizations into appealing, impactful data stories Learn the fundamental elements of a data story and key audience drivers Understand the differences between how the brain processes facts and narrative Structure your findings as a data narrative, using a four-step storyboarding process Incorporate the seven essential principles of better visual storytelling into your work Avoid common data storytelling mistakes by learning from historical and modern examples  Effective Data Storytelling: How to Drive Change with Data, Narrative and Visuals is a must-have resource for anyone who communicates regularly with data, including business professionals, analysts, marketers, salespeople, financial managers, and educators.",
+		"citation-key": "Dykes2019EffectiveDataStorytelling",
+		"ISBN": "978-1-119-61572-9",
+		"language": "en",
+		"note": "Google-Books-ID: rHDDDwAAQBAJ",
+		"number-of-pages": "338",
+		"publisher": "John Wiley & Sons",
+		"source": "Google Books",
+		"title": "Effective Data Storytelling: How to Drive Change with Data, Narrative and Visuals",
+		"title-short": "Effective Data Storytelling",
+		"author": [
+			{
+				"family": "Dykes",
+				"given": "Brent"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2019",
+					12,
+					10
+				]
+			]
+		}
+	}
+]

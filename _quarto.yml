@@ -1,0 +1,23 @@
+project:
+  type: website
+
+website:
+  title: "Visual Communication and Data Storytelling Playground"
+  navbar:
+    left:
+      - index.qmd
+      - bibliography-example.qmd
+      - text: "Presentation"
+        href: presentation.qmd
+      - scrollytelling.qmd
+
+format: 
+  html:
+    toc: true                   # This creates the table of context menu
+    toc-depth: 2                # Increase if you want to have subsections in the table of context menu
+    number-sections: true
+    code-fold: true
+    code-tools: true
+  revealjs:
+    slide-number: true
+    smaller: true

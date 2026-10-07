@@ -1,0 +1,156 @@
+---
+title: "Report"
+author: "Names"
+format: html
+bibliography: Visual Communication and Data Storytelling.json
+---
+
+> The file `index.qmd` (where this page is built from) and `presentation.qmd` are template for your **data story**. The **Presentation** (`presentation.qmd`) is an HTML slide-deck in the format Revealjs which you can build with [Quarto > Presentations > Revealjs](https://quarto.org/docs/presentations/revealjs/). The **Report** (`index.qmd`) accompanies and in some sense repeats the Data Story in pyramid format (see @Dykes2019EffectiveDataStorytelling). That is like a newspaper article coming quickly to the main point and then underpins it with additional information and context. *When you use `index.qmd` as template, remove this text.*
+
+[Slide-deck of the data story](presentation.qmd)
+
+```{r}
+#| label: packages
+#| message: false
+
+# These are the packages used in the report
+library(tidyverse)
+```
+
+
+*The following is a potential structure of your report.*
+
+*The following headlines are suggestions only.*
+
+## Outline
+
+*What questions will the report address and why?*
+
+*How can data be accessed. Code for loading.*
+
+*Information how data is collected. Who collects data.*
+
+*Be very brief here! Come to the main point fast. If necessary provide and refer to an appendix. You can also use footnotes.^[This is a footnote, which can be used for more information which may distract from coming to the main point fast.]*
+
+Your report shall follow an "inverted pyramid" story format [see @Dykes2019EffectiveDataStorytelling] .
+
+Remove all this text and put your content.^[Using this template is not mandatory.]
+
+:::{.callout-note}
+Optional: Publish your Data Story using [Quarto > Publish > GitHub-Pages](https://quarto.org/docs/publishing/github-pages.html).
+:::
+
+
+## Main Insight *Better give a more substantial title!*
+
+This should present your main point visually with one (or more) figures and text which explains and interprets it as part of your data story.  
+
+*In the report code should be there, but folded in.*
+
+```{r}
+#| label: fig-mainvisualization
+#| fig-cap: "*The figure shows bubble plots in Hans Rosling's style. But this is just a placeholder.*"
+#| warning: false # Use this only when you checked that it is OK. It is not a good default for every figure cell.
+ 
+df <- read_csv("data/country_panel_wdi_who.csv", show_col_types = FALSE)
+
+df |>
+  filter(year %in% c(1978, 1998, 2018)) |>
+  ggplot(aes(
+    x = gdp_per_capita_usd,
+    y = life_expectancy_years,
+    size = total_population,
+    color = region
+  )) +
+  geom_point(alpha = 0.8) +
+  scale_x_log10(breaks = c(300, 3000, 30000)) +
+  scale_y_continuous(limits = c(40, 87)) +
+  scale_size_area(max_size = 15) +
+  scale_color_brewer(palette = "Dark2") +
+  facet_wrap(~year) +
+  labs(x = "GDP per capita (USD)", y = "Life expectancy (years)") +
+  theme_minimal() +
+  theme(legend.position = "bottom", panel.border = element_rect()) +
+  guides(
+    size = "none",
+    color = guide_legend(ncol = 4, override.aes = list(size = 4), title = NULL)
+  )
+```
+
+Label your Figures using `label: fig-something`, then you can create cross references like @fig-mainvisualization. It is a standard practice in research articles to refer to Figures in this way. For example: @fig-lifeexpectancy shows the life expectancy for the countries with a population larger than more than 20 million. 
+
+*Refer here to*
+
+- *Additional visualizations and analysis below*
+- *Accompnaying Dashboards*
+- *...*
+
+## Additional insights
+
+*Better give a more substantial title.*
+
+```{r}
+#| label: fig-lifeexpectancy
+#| fig-height: 7
+#| fig-cap: "*This is just a placeholder.*"
+
+df |>
+  filter(year == 2016, total_population > 20000000) |>
+  summarize(
+    mean_var = mean(life_expectancy_years),
+    .by = c(country_name, region)
+  ) |>
+  arrange(mean_var) |>
+  ggplot(aes(
+    x = mean_var,
+    y = country_name |> fct_inorder(),
+    fill = region
+  )) +
+  geom_col() +
+  labs(
+    title = "Life Expectancy, Countries with more than 20 Mio.",
+    x = "",
+    y = "",
+    fill = ""
+  ) +
+  scale_fill_brewer(palette = "Dark2") +
+  theme_minimal()
+```
+
+### You may have subsections here or elsewhere
+
+### However, subsections usually make sense when there is more than one
+
+## Conclusion
+
+*Topics like: What have we learned? How does it fit in or help in broader contexts? Any actions recommended? What remains open? What are next steps? Which of these questions are most relevant depends on the type of your project.*
+
+## Interactive Visualization / Data Dashboard {.appendix}
+
+*Either have this here or on another webpage (new quarto file).*
+
+*Interactive visualizations may also appear above.* 
+
+*The focus here is to provide the reader with sensible ways to explore the data independently. You have to think about what could be of interest.*
+
+
+
+
+## Data Source {.appendix}
+
+*If specific information and details about the data source would be too long in the "Outline" section, put it in an appendix section.* 
+
+## Other appendix sections {.appendix}
+
+*Do the same with other text which distracts the reading of the main text.*
+
+## References {.unnumbered .appendix}
+
+*This is compiled automatically from all citations. Here, just one reference was cited. It has been cited in the text as `@Dykes2019EffectiveDataStorytelling`, and this cite-key refers to the cite-keys in the Zotero Group <https://www.zotero.org/groups/6686224/visual_communication_and_data_storytelling/library> which the instructor compiled.*
+
+*See more details in the [Bibliography Example](bibliography-example.qmd).* 
+
+---
+
+::: {#refs}
+:::

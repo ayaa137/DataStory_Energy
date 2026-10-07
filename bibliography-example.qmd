@@ -1,0 +1,24 @@
+---
+title: "Bibliography Example"
+format: html
+bibliography: Visual Communication and Data Storytelling.json
+---
+
+*This is an Example showing how to do citations and referencing using the a literature database in [Zotero](https://zotero.org).*
+
+*The following cite-keys refers to the cite-keys in the Zotero Group <https://www.zotero.org/groups/6686224/visual_communication_and_data_storytelling/library> which the instructor compiled.*
+
+*For the purpose of referencing in this document, the Zotero collection has been downloaded as a the file `Visual Communication and Data Storytelling.json` using the command "Export Library" and then selecting "CSL JSON". This file then appears in the YAML as `bibliography: Visual Communication and Data Storytelling.json`. Positron and other IDEs provide good tools for easy referencing. In Positron: Once biblography file is properly stroed and indicated in YAML, just type `@` and a context menu was all available references pops up.*
+
+@Dykes2019EffectiveDataStorytelling is our main reading in the course. 
+
+@Savage2026HowWhyRead is an advice on how to read scientific papers (with on visuals as a core thing to scrutinize). Consequently, it also gives good advice onn how to write for an academic audience. 
+
+@FranconeriEtAl2021ScienceVisualData is a great overview of scientific evidence about what works well in data visualization.
+
+@SegelHeer2010NarrativeVisualizationTelling is an early paper about data visualization embedded in storytelling with examples from data journalism.  
+
+@Munzner2009NestedModelVisualization is a conceptual paper on data visualization in computer science. 
+
+These are two papers on specific topics: @KongEtAl2018FramesSlantsTitles demonstrates that the text you have in your visual is as important or even more important than the actual visual. @BoyEtAl2017ShowingPeopleData reports experimental findings if visualizing people as people in data visualization increases empathy. 
+
