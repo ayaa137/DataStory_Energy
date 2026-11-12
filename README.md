@@ -1,53 +1,76 @@
-# Visual Communication and Data Story Telling Playground
+# Renewable Energy Transition Across Countries
 
-This is a template repository. You can make your own repos based on this template. 
+**Team:** Aya Abdine, Meriam El Askri, Mcolisi Austine, Ghofran Mahmoud
 
-## Get your playground ready
+**Keyword:** Green Energy
 
-1. Create your own playground repository from this template (Green Button top right). Give it a name like `VisComPlayground`. 
-2. Clone your repository to your computer. (Open Folder from Git)
-3. In TERMINAL: Type `quarto render` to produce the website. 
-4. Open the website in your browser by clicking on `_site/index.html`
-5. Explore the different HTML-page types in the HTML but also in their source type:
-    - A **report** in a typical article style with references, numbered figures, and crossreferences. 
-    - More **referencing** in the "Bibliograpy Example"
-    - A **slide deck** in the "Presentation"
-    - An example of **"Data Scrollytelling"** 
-6. The scripts `CountryBubbles.R` and `WarmingStripes.R` are files with code for producing Visuals. Make your own visuals, and develop a sense for what is needed for a great visual in a data story. 
+**Course:** Visual Communication and Data Storytelling
 
-## Make your DataStory repo from here
+**Status:** Milestones 0–4 completed; repository prepared for individual review. The final report and 3D visualization are future work.
 
-The default delivery in **Visual Communication and Data Storytelling** is a repository with the 
+We compare renewable adoption, electricity-source mixes, economic context, and changes since 2000 across **Germany, Denmark, Norway, France, China, United States, India, Brazil, Japan, and South Africa**.
 
-- The **slide deck** of your data story in *narrative* form (Default reproducible format: Quarto Revealjs HTML)
-- The accompanying **report** of your data story in *news article* form (Default reproducible format: Quarto HTML)
+The target audience is general, non-expert readers interested in sustainability and global development. Our central insight is that there is no single path to renewable energy: national shares, source mixes, economic contexts, and trajectories differ.
 
-Alternatively, a narrative scrollytelling part can replace the slide deck (Format: Quarto closeread-html)   
-Additionally a dashboard with interactive graphics for self exploration of readers
+## Data and coverage
 
+Source: [Our World in Data Energy Dataset](https://github.com/owid/energy-data), using the [requested CSV](https://raw.githubusercontent.com/owid/energy-data/master/owid-energy-data.csv) and its saved snapshot.
 
-### Step-by-step guide: How to make a minimal version from your DataStory
+The working dataset has 260 country-year rows for 2000–2025. Primary-energy renewable shares end in 2024; GDP ends in 2022. Missing observations are preserved. The requested GitHub dataset is now a legacy release and is no longer updated. See [ENERGY_DATA_NOTES.md](ENERGY_DATA_NOTES.md) for definitions, coverage, and provenance.
 
+## Repository structure
 
-1. On GitHub: Create another repository from this template (Green Button top right). Name it `DataStory_KEYWORD`. Replace KEYWORD with one keyword describing your data story. 
-2. On GitHub: Add all team members as collaborators. Settings -> Collaborators -> Add people -> *Type in GitHub-name to add*
-    - If you chose to keep your repository private, you need to add the instructor as a collaborator for assessment! 
-4. On your computers: Clone the repository to your computer. (Open Folder from Git)
-5. On your computer: Remove 
-    - `bibliography-example.qmd`
-    - `CountryBubbles.R`
-    - `WarmingStripes.R`
-    - `scrollytelling.qmd`
-    - all files in `data/`
-6. Update in `_quarto.yml`: In `website:navbar:left:` remove the lines `bibliography-example.qmd` and `scrollytelling.qmd`. Enter the title of your Data Story 
-7. On bibliography: When you export your own bibliography file from Zotero save it in the same place as `Visual Communication and Data Storytelling.json`. Then go to `index.html` and replace the filename in the YAML `bibliography:`. Then you can delete the old `.json` file. 
-8. On `_extensions`: If you do not do a scrollytelling part you can delete this folder. 
-9. `quarto render` in TERMINAL to test if it works. 
-10. Remove this very text from `README.md` (this very file) and write some short basic info about what your repo is. 
-11. Source Control Pane: Commit all changes (including the deleted files), and push to GitHub
+```text
+data/
+  energy_10countries_clean.csv
+  energy_data_quality_summary.csv
+  energy_source/                 # Raw CSV, codebook, checksum manifest
+notebooks/
+  01_data_preparation.ipynb
+  02_main_insights.ipynb
+  03_visual_drafts.ipynb          # Four visuals; preserves existing final PNGs
+visuals/
+  01_renewable_adoption_2024.png
+  02_renewable_electricity_pathways_2024.png
+  03_gdp_vs_renewables.png
+  04_transition_over_time.png
+index.qmd                        # Short project overview, not the final report
+presentation.qmd                 # Milestone 4 presentation/storyboard
+presentation.css
+prepare_energy_data.py
+requirements.txt
+_quarto.yml
+```
 
-Now you have a simplified file structure for your Data Story. Start editing:
+## Reproduce and review
 
-- `index.qmd` with the basic structure of about your report, like title and authors. Remove all the text and put a draft for your structure. 
-- `presentation.qmd` with title and a first structure of `## HEADLINES` to specifiy some slides you want to have
-- Put your data in the data folder.
+Use Python 3.11+ and Quarto (validated with Python 3.13 and Quarto 1.9.37). Install Python dependencies:
+
+```powershell
+python -m pip install -r requirements.txt
+```
+
+Run the notebooks in order with a Python 3 kernel. The preparation notebook calls the existing preparation script in **offline** mode, verifying the saved snapshot rather than downloading revised data. Alternatively:
+
+```powershell
+python prepare_energy_data.py --offline
+jupyter nbconvert --to notebook --execute --inplace notebooks/01_data_preparation.ipynb
+jupyter nbconvert --to notebook --execute --inplace notebooks/02_main_insights.ipynb
+jupyter nbconvert --to notebook --execute --inplace notebooks/03_visual_drafts.ipynb
+quarto render
+```
+
+Open `_site/index.html` and `_site/presentation.html`. The active website build renders only the project overview and presentation. Figure cells display their charts but preserve already-existing final PNG files.
+
+If Windows blocks Quarto's default cache location, use a process-local cache inside the repository:
+
+```powershell
+$env:LOCALAPPDATA = Join-Path (Get-Location) '.quarto/runtime'
+quarto render
+```
+
+## Retained material and limitations
+
+Course template R scripts, example QMD pages, bibliography, extension, and unrelated template data are retained. They are not part of the active Python analysis or website build. The earlier root-level chart script and PNG are retained as prior work; the four reviewed visuals are in `visuals/`.
+
+The pitch's global map is not present, so the presentation opens with text. Adding the original map still requires its source asset. The 3D slide is a conceptual diagram only.

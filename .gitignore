@@ -3,3 +3,7 @@
 /_site/
 /.vscode/
 air.toml
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/

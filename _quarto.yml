@@ -1,21 +1,23 @@
 project:
   type: website
+  render:
+    - index.qmd
+    - presentation.qmd
 
 website:
-  title: "Visual Communication and Data Storytelling Playground"
+  title: "Renewable Energy Transition Across Countries"
   navbar:
     left:
-      - index.qmd
-      - bibliography-example.qmd
+      - text: "Project overview"
+        href: index.qmd
       - text: "Presentation"
         href: presentation.qmd
-      - scrollytelling.qmd
 
-format: 
+format:
   html:
-    toc: true                   # This creates the table of context menu
-    toc-depth: 2                # Increase if you want to have subsections in the table of context menu
-    number-sections: true
+    toc: true
+    toc-depth: 2
+    number-sections: false
     code-fold: true
     code-tools: true
   revealjs:

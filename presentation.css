@@ -1,0 +1,153 @@
+/* Final layout pass. Chart-slide layouts and all chart assets are preserved. */
+:root {
+  --ink: #172b3a;
+  --muted: #526171;
+  --teal: #008774;
+  --green: #009e73;
+  --rule: #dce8e4;
+}
+.reveal { font-family: "Segoe UI", "DejaVu Sans", sans-serif; font-size: 30px; color: var(--ink); }
+.reveal .slides { text-align: left; }
+.reveal .slides section { box-sizing: border-box; height: 900px; padding: 42px 52px 40px; }
+.reveal h2 {
+  margin: 0 0 34px; color: var(--ink); font-family: inherit;
+  font-size: 54px; font-weight: 650; line-height: 1.12;
+  letter-spacing: -1.5px; text-transform: none;
+}
+.reveal p { margin: 0 0 24px; line-height: 1.4; }
+.reveal strong { font-weight: 650; }
+.reveal .lede { color: var(--muted); max-width: 1100px; font-size: 29px; }
+
+/* An opening built around the headline, without an unavailable-map placeholder. */
+.reveal .opening {
+  padding: 120px 78px 80px;
+  background: radial-gradient(ellipse at 100% 100%, rgba(0,158,115,.19), transparent 65%);
+}
+.reveal .opening h2 {
+  color: #f4fbf8; font-size: 88px; line-height: 1.06;
+  max-width: 1080px; margin: 0 0 80px; letter-spacing: -3px;
+}
+.opening-statement {
+  max-width: 960px; border-left: 6px solid #68d4b8;
+  padding-left: 28px; color: #b7e6d9; font-size: 34px;
+}
+
+/* Equal cards show the comparison group without implying a ranking. */
+.country-grid {
+  display: grid; grid-template-columns: repeat(5, 1fr);
+  gap: 22px; margin-top: 62px;
+}
+.country-card {
+  display: flex; align-items: center; justify-content: center;
+  min-height: 180px; padding: 20px 15px; text-align: center;
+  border: 1px solid #d3e6de; border-top: 5px solid var(--green);
+  border-radius: 10px; background: #f2f8f5;
+  font-size: 30px; font-weight: 600;
+}
+.country-card p { margin: 0; line-height: 1.2; }
+
+/* Existing chart-slide geometry is deliberately retained. */
+.reveal .chart-slide { padding: 28px 40px 24px; }
+.reveal .chart-slide h2 { font-size: 40px; letter-spacing: -0.8px; margin-bottom: 13px; }
+.takeaway { color: var(--muted); font-size: 25px; min-height: 62px; }
+.takeaway p { margin: 0; line-height: 1.3; }
+.chart { height: 660px; width: 100%; display: flex; align-items: center; justify-content: center; }
+.chart p { width: 100%; height: 100%; margin: 0; text-align: center; }
+.reveal .chart img {
+  height: 100%; width: 100%; max-width: 100%; max-height: 100%;
+  object-fit: contain; margin: 0; border: none; box-shadow: none;
+}
+.chart-context { font-size: 18px; color: var(--muted); margin-top: 10px; }
+.chart-context p { margin: 0; }
+
+/* Bridge titles establish context; the statements carry the emphasis. */
+.reveal .bridge { padding: 68px 80px 70px; color: #f4fbf8; }
+.reveal .bridge h2 {
+  color: #a5d6c9; font-size: 30px; font-weight: 500; letter-spacing: 0;
+  margin: 0 0 110px; max-width: 1100px;
+}
+.dominant-statement { max-width: 1100px; font-size: 78px; line-height: 1.15; font-weight: 600; letter-spacing: -2px; }
+.dominant-statement p { line-height: 1.15; }
+.bridge-support { max-width: 1010px; margin-top: 56px; font-size: 33px; color: #b7e6d9; }
+.time-bridge .dominant-statement { font-size: 91px; max-width: 1080px; }
+.time-bridge .bridge-support { border-left: 5px solid #68d4b8; padding-left: 28px; }
+
+/* Four blocks synthesize the four findings without introducing more evidence. */
+.insight-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 44px 0 52px; }
+.insight-card {
+  min-height: 150px; box-sizing: border-box; padding: 30px;
+  display: flex; align-items: center;
+  border-radius: 10px; border-left: 5px solid var(--green); background: #f0f7f4;
+  font-size: 33px;
+}
+.insight-card p { margin: 0; }
+.insight-card strong { color: #006f5a; }
+.conclusion-takeaway { max-width: 1100px; font-size: 53px; line-height: 1.14; font-weight: 650; color: #006f5a; }
+.conclusion-takeaway p { line-height: 1.14; }
+
+/* Requested conceptual diagram: indicator inputs, no invented values or scales. */
+.next-intro { color: var(--muted); font-size: 32px; }
+.profile-diagram {
+  display: grid; grid-template-columns: 1fr 1.08fr 1fr;
+  gap: 68px; align-items: center; margin: 56px 22px 60px;
+}
+.profile-inputs { display: grid; gap: 16px; }
+.indicator {
+  border: 1px solid #cde3da; border-radius: 8px;
+  background: #f1f8f5; padding: 20px 16px; font-size: 27px; text-align: center;
+}
+.indicator p { margin: 0; line-height: 1.15; }
+.profile-core {
+  position: relative; background: #103d3b; color: #f4fbf8;
+  border: 2px solid #006f5a; border-radius: 14px; padding: 64px 20px;
+  text-align: center; font-size: 36px;
+  box-shadow: 12px 12px 0 #dbede5;
+}
+.profile-core::before, .profile-core::after {
+  content: ""; position: absolute; width: 68px; height: 2px;
+  top: 50%; background: #8bbcab;
+}
+.profile-core::before { right: 100%; }
+.profile-core::after { left: 100%; }
+.profile-core strong { font-size: 45px; }
+.profile-core p { line-height: 1.25; }
+.concept-label { font-size: 20px; color: #b7e6d9; }
+.design-challenge { font-size: 31px; color: #006f5a; max-width: 1150px; }
+.reveal .progress { color: var(--teal); height: 4px; }
+.reveal .controls { color: var(--teal); }
+.reveal .slide-number { font: 16px "Segoe UI", sans-serif; background: transparent; color: #687b89; right: 20px; bottom: 14px; }
+@media print { .reveal .slides section { print-color-adjust: exact; } }
+/* Evidence-led revision: space for the chart and its actual country comparisons. */
+.reveal .opening h2 { font-size: 78px; margin-bottom: 60px; }
+.opening-statement { max-width: 1040px; font-size: 33px; }
+.country-slide .lede { font-size: 28px; }
+.country-grid { margin-top: 46px; }
+.reveal .chart-slide h2 { font-size: 39px; margin-bottom: 18px; }
+.evidence-layout { display: grid; grid-template-columns: minmax(0, 3.4fr) minmax(0, 1fr); gap: 22px; align-items: center; height: 640px; }
+.evidence-layout .chart { height: 640px; min-width: 0; }
+.observations { font-size: 24px; color: var(--muted); border-left: 3px solid #d3e6de; padding-left: 22px; }
+.observations strong { color: #006f5a; }
+.observations p { margin-bottom: 30px; line-height: 1.35; }
+.observations p:last-child { margin-bottom: 0; }
+.evidence-takeaway { font-size: 26px; line-height: 1.25; font-weight: 600; color: #006f5a; margin-top: 14px; max-width: 1180px; }
+.evidence-takeaway p { margin: 0; line-height: 1.25; }
+.reveal .bridge h2 { margin-bottom: 90px; }
+.dominant-statement { font-size: 69px; }
+.time-bridge .dominant-statement { font-size: 72px; }
+.bridge-support { font-size: 35px; margin-top: 48px; }
+.context-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 50px 0 42px; }
+.context-card { display: flex; align-items: center; min-height: 115px; padding: 20px 28px; box-sizing: border-box; background: #f1f8f5; border-left: 4px solid var(--green); font-size: 31px; }
+.context-card p { margin: 0; line-height: 1.2; }
+.wide-context { grid-column: 1 / -1; }
+.context-caution { font-size: 29px; color: var(--muted); max-width: 1110px; }
+.conclusion .insight-grid { margin: 40px 0; gap: 20px; }
+.conclusion .insight-card { min-height: 122px; padding: 24px; font-size: 32px; }
+.conclusion-summary { font-size: 37px; color: #006f5a; font-weight: 600; max-width: 1100px; }
+.conclusion-detail { font-size: 29px; color: var(--muted); max-width: 1130px; }
+.next-intro { font-size: 29px; max-width: 1150px; }
+.profile-diagram { margin: 30px 22px 38px; gap: 56px; }
+.indicator { padding: 16px 14px; font-size: 25px; }
+.profile-core { padding: 42px 16px; font-size: 32px; }
+.profile-core strong { font-size: 40px; }
+.profile-core::before, .profile-core::after { width: 56px; }
+.design-challenge { font-size: 30px; }
