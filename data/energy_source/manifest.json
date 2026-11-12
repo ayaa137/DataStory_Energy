@@ -1,0 +1,15 @@
+{
+  "retrieved_at_utc": "2026-11-12T12:27:44.017285+00:00",
+  "source_status": "Legacy OWID Energy dataset; no longer updated",
+  "documentation_url": "https://github.com/owid/energy-data",
+  "files": {
+    "owid-energy-data.csv": {
+      "url": "https://raw.githubusercontent.com/owid/energy-data/master/owid-energy-data.csv",
+      "sha256": "266f2e2baad7975351bc9bb4aa061d22b1da9fe4c47d51d2ac6071e01e171f76"
+    },
+    "owid-energy-codebook.csv": {
+      "url": "https://raw.githubusercontent.com/owid/energy-data/master/owid-energy-codebook.csv",
+      "sha256": "3cc9b7db0d921496e2988568ce3aee5ed41f50431dd234a0663b5f0a4b2e32bb"
+    }
+  }
+}

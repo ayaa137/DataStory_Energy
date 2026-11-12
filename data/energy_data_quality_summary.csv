@@ -1,0 +1,11 @@
+variable,non_missing_observations,missing_observations,percentage_missing,earliest_available_year,latest_available_year
+country,260,0,0.0,2000,2025
+year,260,0,0.0,2000,2025
+population,260,0,0.0,2000,2025
+gdp,230,30,11.54,2000,2022
+renewables_share_energy,250,10,3.85,2000,2024
+renewables_share_elec,260,0,0.0,2000,2025
+solar_share_elec,260,0,0.0,2000,2025
+wind_share_elec,260,0,0.0,2000,2025
+hydro_share_elec,260,0,0.0,2000,2025
+electricity_generation,260,0,0.0,2000,2025
