@@ -6,4 +6,5 @@ air.toml
 __pycache__/
 *.py[cod]
 .ipynb_checkpoints/
+*.nbconvert.ipynb
 .venv/

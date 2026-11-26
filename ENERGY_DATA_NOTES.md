@@ -2,7 +2,7 @@
 
 ## Run and reproduce
 
-From the repository root, with Python 3.10+ and pandas installed:
+From the repository root, using the environment described in [README.md](README.md):
 
 ```powershell
 python prepare_energy_data.py
@@ -117,14 +117,16 @@ coverage, not independent verification of each source estimate.
 
 ## Suitability for the planned story
 
-2000 onward is a sensible multi-decade window for comparing renewable adoption,
-electricity-source mixes, and transition speed. Use **2000–2025 for electricity**,
-**2000–2024 for primary-energy renewable shares**, and **2000–2022 when GDP is
-required**. Preserve the full dataset and choose the common observed period for
-each future chart or analysis. Do not imply that all variables describe 2025.
+The saved electricity indicators extend through 2025. The integrated visuals use
+2024 as their common energy reference year because it is the latest complete
+primary-energy year. The annual source-mix charts and map therefore span
+2000–2024. GDP is available through 2022, and both income visuals use GDP divided
+by population in purchasing-power-adjusted 2011 international dollars per person.
+The 2024 electricity volume estimate uses total generation in TWh multiplied by
+the renewable electricity share divided by 100. The published share is rounded,
+so this product can differ slightly from OWID's separately reported renewable TWh.
 
 All 10 countries are suitable on the observed coverage and offer varied renewable
 mixes. This is a deliberately selected comparison group, not a representative
 sample of the world. Population and GDP provide context; the dataset alone cannot
 establish that economic or demographic differences cause adoption differences.
-No project charts or 3D visualizations were created in this step.

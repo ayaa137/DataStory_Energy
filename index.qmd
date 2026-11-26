@@ -10,7 +10,7 @@ format: html
 
 **Keyword:** Green Energy
 
-**Status:** Milestones 0–4 completed. This page is a project overview for review, not the final report.
+**Status:** The analysis and nine visualizations are available for review.
 
 [Open the Milestone 4 presentation](presentation.qmd)
 
@@ -34,7 +34,7 @@ A general, non-expert audience interested in sustainability, renewable energy, a
 
 1. Renewable-energy adoption differs greatly across countries.
 2. Countries follow different renewable-energy pathways.
-3. Economic size does not automatically determine renewable-energy leadership.
+3. Renewable primary-energy shares vary substantially across income levels.
 4. Countries have made very different gains in renewable-energy share since 2000.
 
 ## Main prioritized insight
@@ -43,6 +43,4 @@ A general, non-expert audience interested in sustainability, renewable energy, a
 
 ## Review materials
 
-The three Python notebooks in `notebooks/` cover data preparation, main insights, and four visual drafts. The reviewed figures are in `visuals/`; the presentation connects them into the Milestone 4 story.
-
-The final report and 3D visualization are future work.
+The four Python notebooks in `notebooks/` cover data preparation, main insights, figure generation, and the integrated visual story. The `visuals/` folder contains nine figures, including an animated 3D map of hydro, wind, and solar electricity shares from 2000 to 2024 and an animated comparison of GDP per capita and renewable primary-energy share. The Milestone 4 presentation records the earlier storyboard.
